@@ -1,0 +1,15 @@
+webserver:
+  service:
+    type: LoadBalancer
+  defaultUser:
+    enabled: true
+    username: admin
+    password: random_password_user
+    role: Admin
+webserverSecretKey: random_password_web
+dags:
+  gitSync:
+    enabled: true
+    repo: https://github.com/alfonsozamorac/dag-examples.git
+    branch: main
+    subPath: ""
